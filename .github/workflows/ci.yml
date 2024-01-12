@@ -21,6 +21,6 @@ jobs:
               username: ${{ secrets.DOCKERHUB_USERNAME }}
               password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Build user service docker image
-        run: docker build . --file Dockerfile -t "$DOCKER_USERNAME/himangshu12/cicd:latest"
+        run: docker build . --file Dockerfile -t "#$DOCKER_USERNAME/#himangshu12/cicd:latest"
       - name: Push user service docker image
-        run: docker push "$DOCKER_USERNAME/himangshu12/cicd:latest"
+        run: docker push "#$DOCKER_USERNAME/#himangshu12/cicd:latest"
