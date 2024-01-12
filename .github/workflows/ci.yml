@@ -4,8 +4,8 @@ on:
     branches: [master]
   workflow_dispatch:
 env:
-  DOCKER_USERNAME: ${{secrets.DOCKERHUB_USERNAME}}
-  DOCKER_PASSWORD: ${{secrets.DOCKERHUB_PASSWORD}}
+  username: ${{secrets.DOCKERHUB_USERNAME}}
+  password: ${{secrets.DOCKERHUB_PASSWORD}}
 jobs:
   create-user-image:
     runs-on: ubuntu-latest
